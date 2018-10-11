@@ -12,7 +12,6 @@ public class Atributos : MonoBehaviour {
 	private int dinheiro;
 	private int tick;
 
-
 	// Use this for initialization
 	void Start () {
 		dinheiroText = GameObject.Find("Dinheiro").GetComponent<Text>();

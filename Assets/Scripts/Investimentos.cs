@@ -6,18 +6,18 @@ public abstract class Investimentos : MonoBehaviour {
 
 	private int[] custo;
 	private float[] tempo;
-	private int currentTier;
+	public int currentTier;
 	private int maxTier;
-	public int id;
-	private enum Tipo { Microfone, Camera , SoftwareDeGravacao , Carisma , Montagem }
+	public enum Tipo { Microfone, Camera , SoftwareDeGravacao , Carisma , Montagem }
+	public Tipo id;
 
 	// Use this for initialization
-	void Start () {
+	protected virtual void Start () {
 		currentTier = 0;
 	}
 
 	void Investir(){
-		
+		currentTier = Mathf.Max(currentTier+1,maxTier);
 	}
 
 	public abstract void Efeito();

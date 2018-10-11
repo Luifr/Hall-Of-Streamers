@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 28293221}
   - component: {fileID: 28293220}
   m_Layer: 5
-  m_Name: Dinehiro
+  m_Name: Dinheiro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -180,7 +180,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Dinehiro: 0
+  m_Text: 'Dinheiro: 0
 
 '
 --- !u!222 &28293221
@@ -297,8 +297,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ac79b8a2c7cc1345a619ce07b15d023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dinheiroText: {fileID: 28293220}
-  viewersText: {fileID: 1316967806}
 --- !u!4 &472929220
 Transform:
   m_ObjectHideFlags: 0
