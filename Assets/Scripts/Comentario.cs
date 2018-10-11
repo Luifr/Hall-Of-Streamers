@@ -132,7 +132,7 @@ public class Comentario : MonoBehaviour {
 		}
 		return (int)(equipment[i].id);
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		

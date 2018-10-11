@@ -11,6 +11,7 @@ public abstract class Investimentos : MonoBehaviour {
 	[NonSerialized]
 	public int currentTier;
 	private int maxTier;
+	protected bool isEquipment;
 
 	public enum Tipo { Microfone, Camera , SoftwareDeGravacao , Carisma , Montagem }
 	
@@ -25,6 +26,11 @@ public abstract class Investimentos : MonoBehaviour {
 
 	void Investir(){
 		if(Atributos.dinheiro >= custo[currentTier] && currentTier < maxTier){
+			Atributos.delay += tempo[currentTier];
+			if(isEquipment){
+				Atributos.delay -= currentTier; // mudar aqui
+				Atributos.delay = Mathf.Max(0,Atributos.delay);
+			}
 			Atributos.dinheiro -= custo[currentTier];
 			currentTier = currentTier+1;
 			ultimoUpgrade = DateTime.Now;

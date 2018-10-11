@@ -8,6 +8,7 @@ public class UpgradeMicrofone : Investimentos {
 	protected override void Start () {
 		base.Start();
 		id = Tipo.Microfone;
+		isEquipment = true;
 	}
 	
 	public override void Efeito(){

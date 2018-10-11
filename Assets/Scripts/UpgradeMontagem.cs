@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UpgradeCamera : Investimentos {
+public class UpgradeMontagem : Investimentos {
 
 	// Use this for initialization
 	protected override void Start () {
 		base.Start();
-		id = Tipo.Camera;
-		isEquipment = true;
+		id = Tipo.Montagem;
+		isEquipment = false;
 	}
 	
 	public override void Efeito(){
