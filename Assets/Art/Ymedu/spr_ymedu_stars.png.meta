@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-guid: 3de6bf9bf165b1f4299369d2279ae4ea
+guid: e1cd9d3450778ce449bef9fbe71bf412
 TextureImporter:
   fileIDToRecycleName:
-    21300000: spr_wetube_video_overlay_0
-    21300002: spr_wetube_video_overlay_1
+    21300000: spr_ymedu_stars_0
+    21300002: spr_ymedu_stars_1
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -86,13 +86,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spr_wetube_video_overlay_0
+      name: spr_ymedu_stars_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 998
-        height: 560
+        width: 83
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -100,19 +100,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f468dbf61c4f3144b2f47dc0c5f93d6
+      spriteID: e0eb6229b98f6bd47be61de9e6b07274
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_wetube_video_overlay_1
+      name: spr_ymedu_stars_1
       rect:
         serializedVersion: 2
-        x: 1002
+        x: 95
         y: 0
-        width: 998
-        height: 560
+        width: 83
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,7 +120,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91fb22fe2e82bb14790356c79be69ff8
+      spriteID: 849ce2c39d827904bb1750ca339cb96a
       vertices: []
       indices: 
       edges: []
@@ -128,7 +128,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 4ce1bd3f0f4cefe40a6af7bf1132ea19
+    spriteID: 263e3abc799e4f04490551d9833034d7
     vertices: []
     indices: 
     edges: []
