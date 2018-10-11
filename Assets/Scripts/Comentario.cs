@@ -5,20 +5,14 @@ using System;
 
 public class Comentario : MonoBehaviour {
 
-	private List<UpgradeSoftware> equipment;
+	private Investimentos[] equipment;
 	private string[] nomes;
 	private string[][] comentario;
 	private string[] comentarioPositivo;
 
 	// Use this for initialization
 	void Start () {
-		equipment = new List<UpgradeSoftware>();
-		UpgradeSoftware[] u = GameObject.Find("Equipments").GetComponentsInChildren<UpgradeSoftware>();
-		foreach(UpgradeSoftware t in u){
-			if(t.id == Investimentos.Tipo.Camera || t.id == Investimentos.Tipo.Microfone || t.id == Investimentos.Tipo.SoftwareDeGravacao ){
-				equipment.Add(t);				
-			}
-		}
+		equipment = GameObject.Find("Equipments").GetComponentsInChildren<Investimentos>();
 
 		nomes = new String [] {
 			"chickleslimy",
@@ -122,13 +116,13 @@ public class Comentario : MonoBehaviour {
 	}
 
 	int getEquipmentToComment(){
-		equipment.Sort(delegate(UpgradeSoftware u1, UpgradeSoftware u2){
+		Array.Sort(equipment,delegate(Investimentos u1, Investimentos u2){
 			int j = (int)(u1.id) - (int)(u2.id);
 			return j != 0 ? j : (u1.ultimoUpgrade - u2.ultimoUpgrade).Seconds; 
 		});
 		int i=0;
 		while(UnityEngine.Random.Range(0,101) >= 80){
-			i = Math.Max(i+1, equipment.Count-1 );
+			i = Math.Max(i+1, equipment.Length-1 );
 		}
 		return (int)(equipment[i].id);
 	}

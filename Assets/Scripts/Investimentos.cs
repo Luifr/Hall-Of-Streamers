@@ -5,8 +5,8 @@ using System;
 
 public abstract class Investimentos : MonoBehaviour {
 
-	private int[] custo;
-	private int[] tempo;
+	protected int[] custo;
+	protected int[] tempo;
 	public DateTime ultimoUpgrade;
 	[NonSerialized]
 	public int currentTier;
@@ -24,7 +24,7 @@ public abstract class Investimentos : MonoBehaviour {
 		maxTier=1;
 	}
 
-	void Investir(){
+	public void Investir(){
 		if(Atributos.dinheiro >= custo[currentTier] && currentTier < maxTier){
 			Atributos.delay += tempo[currentTier];
 			if(isEquipment){
