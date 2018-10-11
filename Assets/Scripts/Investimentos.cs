@@ -24,8 +24,8 @@ public abstract class Investimentos : MonoBehaviour {
 	}
 
 	void Investir(){
-		if(attr.dinheiro >= custo[currentTier] && currentTier < maxTier){
-			attr.dinheiro -= custo[currentTier];
+		if(Atributos.dinheiro >= custo[currentTier] && currentTier < maxTier){
+			Atributos.dinheiro -= custo[currentTier];
 			
 			currentTier = currentTier+1;
 			ultimoUpgrade = DateTime.Now;

@@ -5,15 +5,13 @@ using System;
 
 public class BancoDoBrasil : MonoBehaviour {
 
-	private Relogio relogio;
-
 	public int taxaEmprestimo;
 	public int taxaJuros;
 	public int emprestimoMax;
 	public int dinheiroEmprestado;
 	public int prazoPagamento;
-	public DateTime diaEmprestimo;
-	private DateTime tempoDecorrido;
+	public int diaEmprestimo;
+	private int tempoDecorrido;
 
 	// Use this for initialization
 	void Start () {
@@ -30,15 +28,14 @@ public class BancoDoBrasil : MonoBehaviour {
 
 	void AplicarTaxa(){
 		// Caso haja dinheiro emprestado e ainda não tenha atualizado o dia (aplicado as possiveis taxas referentes a este dia)
-		if (dinheiroEmprestado > 0 && diaEmprestimo.Day + tempoDecorrido.Day != Relogio.data.Day) {
+		if (dinheiroEmprestado > 0 && diaEmprestimo + tempoDecorrido != Relogio.data.Day) {
 			// Caso o tempo decorrido seja maior que o prazo, adiciona a taxa de juros =D
-			if (tempoDecorrido > prazoPagamento)
-				dinheiroEmprestado *= 1 + taxaJuros / 100;
-			tempoDecorrido = tempoDecorrido.AddDays (1.0);
+			if (tempoDecorrido++ > prazoPagamento)
+				dinheiroEmprestado *= Mathf.RoundToInt(1.0f + taxaJuros / 100.0f);
 		}
 	}
 
-	void Emprestar(int quantia){
+	int Emprestar(int quantia){
 		if (quantia <= 0)
 			return 1;
 		if (quantia > emprestimoMax)
@@ -46,5 +43,21 @@ public class BancoDoBrasil : MonoBehaviour {
 		if (dinheiroEmprestado > 0)
 			return 3;
 		diaEmprestimo = Relogio.data.Day;
+		tempoDecorrido = 0;
+		dinheiroEmprestado = Mathf.RoundToInt(quantia * (1.0f + taxaEmprestimo / 100.0f));
+
+		Atributos.dinheiro += quantia;
+
+		return 0;
+	}
+
+	int PagarEmprestimo() {
+		if (Atributos.dinheiro < dinheiroEmprestado)
+			return 1;
+
+		Atributos.dinheiro -= dinheiroEmprestado;
+		dinheiroEmprestado = 0;
+
+		return 0;
 	}
 }
