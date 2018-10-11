@@ -5,7 +5,6 @@ using System;
 
 public abstract class Investimentos : MonoBehaviour {
 
-	private Atributos attr;
 	private int[] custo;
 	private int[] tempo;
 	public DateTime ultimoUpgrade;
@@ -22,7 +21,6 @@ public abstract class Investimentos : MonoBehaviour {
 	protected virtual void Start () {
 		currentTier = 0;
 		maxTier=1;
-		attr = GameObject.Find("Atributos").GetComponent<Atributos>();
 	}
 
 	void Investir(){
