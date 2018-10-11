@@ -9,23 +9,28 @@ public class Atributos : MonoBehaviour {
 	private Text viewersText;
 	private int viewers;
 	private int rep;
-	private int dinheiro;
+	private int maxRep;
+	public int dinheiro;
 	private int tick;
-
+	public static int rating;
+	public int delay; // delay em ticks
 	// Use this for initialization
 	void Start () {
 		dinheiroText = GameObject.Find("Dinheiro").GetComponent<Text>();
 		viewersText = GameObject.Find("Viewers").GetComponent<Text>();
 		dinheiro = 0;
 		rep = 0;
+		delay = 0;
+		maxRep = 0;
 		viewers = 2;
 		tick = 0;
+		rating=60;
 	}
 
 	void CalculaViewers(){
 		int hour = Relogio.dia.Hour;
-		viewers = Mathf.RoundToInt( Mathf.Sin(hour/1.91f - Mathf.PI/2) + Mathf.Log(viewers) + (rep * Mathf.Log(rep+1)) ) + 1 ;
-		Debug.Log(viewers);
+		viewers = Mathf.RoundToInt( Mathf.Sin(hour/1.91f) + 0.4f + Mathf.Log(viewers+1)) + 1 ;
+		viewers += maxRep > rep ? -((maxRep-rep)*(maxRep-rep)) : Mathf.RoundToInt(rep*Mathf.Log(rep+1));
 	}
 
 	void CalcularRep(){
@@ -46,9 +51,15 @@ public class Atributos : MonoBehaviour {
 	void Update () {
 		if(tick < Relogio.ticks){
 			tick = Relogio.ticks;
-			CalcularRep();
-			CalculaViewers();
-			AtualizaAtributos();
+			if(delay > 0 ){
+				delay--;
+			}
+			else{
+				rating = Mathf.Max(0,rating-1);
+				CalcularRep();
+				CalculaViewers();
+				AtualizaAtributos();
+			}
 		}
 	}
 }

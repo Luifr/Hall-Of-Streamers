@@ -5,15 +5,16 @@ using System;
 
 public class Comentario : MonoBehaviour {
 
-	private List<Upgrade> equipment;
+	private List<UpgradeSoftware> equipment;
 	private string[] nomes;
 	private string[][] comentario;
+	private string[] comentarioPositivo;
 
 	// Use this for initialization
 	void Start () {
-		equipment = new List<Upgrade>();
-		Upgrade[] u = GameObject.Find("Equipments").GetComponentsInChildren<Upgrade>();
-		foreach(Upgrade t in u){
+		equipment = new List<UpgradeSoftware>();
+		UpgradeSoftware[] u = GameObject.Find("Equipments").GetComponentsInChildren<UpgradeSoftware>();
+		foreach(UpgradeSoftware t in u){
 			if(t.id == Investimentos.Tipo.Camera || t.id == Investimentos.Tipo.Microfone || t.id == Investimentos.Tipo.SoftwareDeGravacao ){
 				equipment.Add(t);				
 			}
@@ -21,13 +22,19 @@ public class Comentario : MonoBehaviour {
 	}
 
 	void Comentar(){
-		int i = getEquipmentToComment();
-		string s = comentario[i][ UnityEngine.Random.Range(0,comentario[i].Length)  ];
+		string s;
+		if(UnityEngine.Random.Range(0,100) > Atributos.rating){
+			int i = getEquipmentToComment();
+			s = comentario[i][ UnityEngine.Random.Range(0,comentario[i].Length)  ];
+		}
+		else{
+			s = comentarioPositivo[UnityEngine.Random.Range(0,comentarioPositivo.Length)];
+		}
 		// printar s como comentario
 	}
 
 	int getEquipmentToComment(){
-		equipment.Sort(delegate(Upgrade u1, Upgrade u2){
+		equipment.Sort(delegate(UpgradeSoftware u1, UpgradeSoftware u2){
 			int j = (int)(u1.id) - (int)(u2.id);
 			return j != 0 ? j : (u1.ultimoUpgrade - u2.ultimoUpgrade).Seconds; 
 		});
