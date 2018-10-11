@@ -17,11 +17,14 @@ public abstract class Investimentos : MonoBehaviour {
 	
 	[NonSerialized]
 	public Tipo id;
+	private Atributos attr;
 
 	// Use this for initialization
 	protected virtual void Start () {
 		currentTier = 0;
 		maxTier=1;
+		var a = GameObject.Find("Atributos");
+		attr = a.GetComponent<Atributos>();
 	}
 
 	public void Investir(){
@@ -35,6 +38,7 @@ public abstract class Investimentos : MonoBehaviour {
 			currentTier = currentTier+1;
 			ultimoUpgrade = DateTime.Now;
 			Atributos.rating+=40;
+			attr.AtualizaAtributos();
 		}
 	}
 
