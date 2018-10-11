@@ -15,10 +15,6 @@ public class Atributos : MonoBehaviour {
 		rep = 0;
 		viewers = 2;
 	}
-	
-	void Comentario(){
-		
-	}
 
 	void CalculaViewers(){
 
