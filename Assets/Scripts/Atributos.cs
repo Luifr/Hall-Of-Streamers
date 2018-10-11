@@ -13,10 +13,10 @@ public class Atributos : MonoBehaviour {
 	public static int dinheiro;
 	private int tick;
 	public static int rating; // aumenta quando faz um upgrade, e decai com o tempo
-	public int delay; // delay em ticks
+	public static int delay; // delay em ticks
 	// Use this for initialization
 	void Start () {
-		dinheiroText = GameObject.Find("Dinheiro").GetComponent<Text>();
+		//dinheiroText = GameObject.Find("Dinheiro").GetComponent<Text>();
 		viewersText = GameObject.Find("Viewers").GetComponent<Text>();
 		dinheiro = 0;
 		rep = 0;
@@ -29,22 +29,30 @@ public class Atributos : MonoBehaviour {
 
 	void CalculaViewers(){
 		int hour = Relogio.data.Hour;
-		viewers = Mathf.RoundToInt( Mathf.Sin(hour/1.91f) + 0.4f + Mathf.Log(viewers+1)) + 1 ;
+		Debug.Log("1: " + viewers);
+		viewers = Mathf.RoundToInt( 3*Mathf.Sin(hour/1.91f) + 0.4f + Mathf.Log(viewers+1));
+		Debug.Log("2: " + viewers);
 		viewers += maxRep > rep ? -((maxRep-rep)*(maxRep-rep)) : Mathf.RoundToInt(rep*Mathf.Log(rep+1));
+		Debug.Log("3: " + viewers + " " + Mathf.RoundToInt(rep*Mathf.Log(rep+1)) + " " + rep);
 	}
 
 	void CalcularRep(){
-		rep += Mathf.RoundToInt(10*Mathf.Log(rating+1));
+		rep += Mathf.RoundToInt(Mathf.Log(rating+1));
 	}
 
 	void AtualizaAtributos(){
 		dinheiro += viewers;
-		viewersText.text = "Viewers " + viewers;
-		dinheiroText.text = "Dinheiro " + dinheiro;
+		viewersText.text = viewers.ToString() +  " VIEWERS";
+		//dinheiroText.text = "Dinheiro " + dinheiro;
 	}
 
 	void ChecarVitoria(){
 
+	}
+
+	public void Share(){
+		// colocar delay, e se clicar demais, tirar viewrs e trigerrar comentario
+		viewers++;
 	}
 
 	// Update is called once per frame

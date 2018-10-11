@@ -8,6 +8,7 @@ public class UpgradeSoftware : Investimentos {
 	protected override void Start () {
 		base.Start();
 		id = Tipo.SoftwareDeGravacao;
+		isEquipment = true;
 	}
 	
 	public override void Efeito(){
