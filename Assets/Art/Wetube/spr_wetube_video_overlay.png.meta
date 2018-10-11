@@ -91,8 +91,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1065
-        height: 600
+        width: 998
+        height: 560
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -100,7 +100,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6510f8666b91f21428f2f349677f51b3
+      spriteID: 0f468dbf61c4f3144b2f47dc0c5f93d6
       vertices: []
       indices: 
       edges: []
@@ -109,10 +109,10 @@ TextureImporter:
       name: spr_wetube_video_overlay_1
       rect:
         serializedVersion: 2
-        x: 1068
+        x: 1002
         y: 0
-        width: 1065
-        height: 600
+        width: 998
+        height: 560
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,7 +120,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6154d2f364680741a054535626441d1
+      spriteID: 91fb22fe2e82bb14790356c79be69ff8
       vertices: []
       indices: 
       edges: []
@@ -128,7 +128,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 581b8c7b26ffb034f937235348b9962f
+    spriteID: 4ce1bd3f0f4cefe40a6af7bf1132ea19
     vertices: []
     indices: 
     edges: []
