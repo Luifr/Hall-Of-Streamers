@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class Atributos : MonoBehaviour {
 
-	public Text dinheiroText;
-	public Text viewersText;
+	private Text dinheiroText;
+	private Text viewersText;
 	private int viewers;
 	private int rep;
 	private int dinheiro;
@@ -15,6 +15,8 @@ public class Atributos : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		dinheiroText = GameObject.Find("Dinheiro").GetComponent<Text>();
+		viewersText = GameObject.Find("Viewers").GetComponent<Text>();
 		dinheiro = 0;
 		rep = 0;
 		viewers = 2;
