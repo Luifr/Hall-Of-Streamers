@@ -11,6 +11,7 @@ public class Comentario : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		equipment = new List<Upgrade>();
 		Upgrade[] u = GameObject.Find("Equipments").GetComponentsInChildren<Upgrade>();
 		foreach(Upgrade t in u){
 			if(t.id == Investimentos.Tipo.Camera || t.id == Investimentos.Tipo.Microfone || t.id == Investimentos.Tipo.SoftwareDeGravacao ){
@@ -27,7 +28,8 @@ public class Comentario : MonoBehaviour {
 
 	int getEquipmentToComment(){
 		equipment.Sort(delegate(Upgrade u1, Upgrade u2){
-			return (int)(u1.id - u2.id);
+			int j = (int)(u1.id) - (int)(u2.id);
+			return j != 0 ? j : (u1.ultimoUpgrade - u2.ultimoUpgrade).Seconds; 
 		});
 		int i=0;
 		while(UnityEngine.Random.Range(0,101) >= 80){

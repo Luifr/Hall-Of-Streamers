@@ -7,7 +7,7 @@ public class Relogio : MonoBehaviour {
 
 	private float timer;
 	public static int ticks;
-	private float secPerTick = 2;
+	private float secPerTick = 4;
 	private int ticksPerDay = 60;
 	public static DateTime dia;
 
