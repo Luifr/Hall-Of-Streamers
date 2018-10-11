@@ -5,8 +5,8 @@ using UnityEngine;
 public class Upgrade : Investimentos {
 
 	// Use this for initialization
-	void Start () {
-		
+	protected override void Start () {
+		base.Start();
 	}
 	
 	public override void Efeito(){

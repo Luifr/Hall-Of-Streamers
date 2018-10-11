@@ -12,7 +12,6 @@ public class Atributos : MonoBehaviour {
 	private int dinheiro;
 	private int tick;
 
-
 	// Use this for initialization
 	void Start () {
 		dinheiroText = GameObject.Find("Dinheiro").GetComponent<Text>();
@@ -24,8 +23,13 @@ public class Atributos : MonoBehaviour {
 	}
 
 	void CalculaViewers(){
-		viewers+= Random.Range(-1,2);
-		viewers = Mathf.Max(0,viewers);
+		int hour = Relogio.dia.Hour;
+		viewers = Mathf.RoundToInt( Mathf.Sin(hour/1.91f - Mathf.PI/2) + Mathf.Log(viewers) + (rep * Mathf.Log(rep+1)) ) + 1 ;
+		Debug.Log(viewers);
+	}
+
+	void CalcularRep(){
+
 	}
 
 	void AtualizaAtributos(){
@@ -42,6 +46,7 @@ public class Atributos : MonoBehaviour {
 	void Update () {
 		if(tick < Relogio.ticks){
 			tick = Relogio.ticks;
+			CalcularRep();
 			CalculaViewers();
 			AtualizaAtributos();
 		}
