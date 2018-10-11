@@ -10,7 +10,7 @@ public class Atributos : MonoBehaviour {
 	private int viewers;
 	public static int rep;
 	private int maxRep;
-	public int dinheiro;
+	public static int dinheiro;
 	private int tick;
 	public static int rating; // aumenta quando faz um upgrade, e decai com o tempo
 	public int delay; // delay em ticks
