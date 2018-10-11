@@ -7,12 +7,14 @@ public abstract class Investimentos : MonoBehaviour {
 
 	private Atributos attr;
 	private int[] custo;
-	private float[] tempo;
+	private int[] tempo;
 	public DateTime ultimoUpgrade;
 	[NonSerialized]
 	public int currentTier;
 	private int maxTier;
+
 	public enum Tipo { Microfone, Camera , SoftwareDeGravacao , Carisma , Montagem }
+	
 	[NonSerialized]
 	public Tipo id;
 
@@ -26,7 +28,6 @@ public abstract class Investimentos : MonoBehaviour {
 	void Investir(){
 		if(Atributos.dinheiro >= custo[currentTier] && currentTier < maxTier){
 			Atributos.dinheiro -= custo[currentTier];
-			
 			currentTier = currentTier+1;
 			ultimoUpgrade = DateTime.Now;
 			Atributos.rating+=40;

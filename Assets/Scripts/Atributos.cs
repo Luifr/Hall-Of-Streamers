@@ -8,11 +8,11 @@ public class Atributos : MonoBehaviour {
 	private Text dinheiroText;
 	private Text viewersText;
 	private int viewers;
-	private int rep;
+	public static int rep;
 	private int maxRep;
 	public static int dinheiro;
 	private int tick;
-	public static int rating;
+	public static int rating; // aumenta quando faz um upgrade, e decai com o tempo
 	public int delay; // delay em ticks
 	// Use this for initialization
 	void Start () {
@@ -34,7 +34,7 @@ public class Atributos : MonoBehaviour {
 	}
 
 	void CalcularRep(){
-
+		rep += Mathf.RoundToInt(10*Mathf.Log(rating+1));
 	}
 
 	void AtualizaAtributos(){
@@ -53,6 +53,7 @@ public class Atributos : MonoBehaviour {
 			tick = Relogio.ticks;
 			if(delay > 0 ){
 				delay--;
+				// alguma animacao aqui
 			}
 			else{
 				rating = Mathf.Max(0,rating-1);
