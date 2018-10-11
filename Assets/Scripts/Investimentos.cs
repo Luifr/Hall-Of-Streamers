@@ -8,7 +8,7 @@ public abstract class Investimentos : MonoBehaviour {
 	private float[] tempo;
 	private int currentTier;
 	private int maxTier;
-	private int id;
+	public int id;
 	private enum Tipo { Microfone, Camera , SoftwareDeGravacao , Carisma , Montagem }
 
 	// Use this for initialization

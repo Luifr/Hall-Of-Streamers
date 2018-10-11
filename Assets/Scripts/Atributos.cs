@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Atributos : MonoBehaviour {
 
+	public Text dinheiroText;
+	public Text viewersText;
 	private int viewers;
 	private int rep;
 	private int dinheiro;
+	private int tick;
 
 
 	// Use this for initialization
@@ -14,14 +18,18 @@ public class Atributos : MonoBehaviour {
 		dinheiro = 0;
 		rep = 0;
 		viewers = 2;
+		tick = 0;
 	}
 
 	void CalculaViewers(){
-
+		viewers+= Random.Range(-1,2);
+		viewers = Mathf.Max(0,viewers);
 	}
 
 	void AtualizaAtributos(){
-
+		dinheiro += viewers;
+		viewersText.text = "Viewers " + viewers;
+		dinheiroText.text = "Dinheiro " + dinheiro;
 	}
 
 	void ChecarVitoria(){
@@ -30,6 +38,10 @@ public class Atributos : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-			
+		if(tick < Relogio.ticks){
+			tick = Relogio.ticks;
+			CalculaViewers();
+			AtualizaAtributos();
+		}
 	}
 }
