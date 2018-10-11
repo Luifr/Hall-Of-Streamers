@@ -28,7 +28,7 @@ public class Atributos : MonoBehaviour {
 	}
 
 	void CalculaViewers(){
-		int hour = Relogio.dia.Hour;
+		int hour = Relogio.data.Hour;
 		viewers = Mathf.RoundToInt( Mathf.Sin(hour/1.91f) + 0.4f + Mathf.Log(viewers+1)) + 1 ;
 		viewers += maxRep > rep ? -((maxRep-rep)*(maxRep-rep)) : Mathf.RoundToInt(rep*Mathf.Log(rep+1));
 	}
