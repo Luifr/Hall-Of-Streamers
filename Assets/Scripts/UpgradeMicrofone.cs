@@ -9,6 +9,8 @@ public class UpgradeMicrofone : Investimentos {
 		base.Start();
 		id = Tipo.Microfone;
 		isEquipment = true;
+		custo = new int[] {30,80,200};
+		tempo = new int[] {3,5,5};
 	}
 	
 	public override void Efeito(){

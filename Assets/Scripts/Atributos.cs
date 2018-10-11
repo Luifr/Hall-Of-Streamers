@@ -29,11 +29,11 @@ public class Atributos : MonoBehaviour {
 
 	void CalculaViewers(){
 		int hour = Relogio.data.Hour;
-		Debug.Log("1: " + viewers);
+		// Debug.Log("1: " + viewers);
 		viewers = Mathf.RoundToInt( 3*Mathf.Sin(hour/1.91f) + 0.4f + Mathf.Log(viewers+1));
-		Debug.Log("2: " + viewers);
+		// Debug.Log("2: " + viewers);
 		viewers += maxRep > rep ? -((maxRep-rep)*(maxRep-rep)) : Mathf.RoundToInt(rep*Mathf.Log(rep+1));
-		Debug.Log("3: " + viewers + " " + Mathf.RoundToInt(rep*Mathf.Log(rep+1)) + " " + rep);
+		// Debug.Log("3: " + viewers + " " + Mathf.RoundToInt(rep*Mathf.Log(rep+1)) + " " + rep);
 	}
 
 	void CalcularRep(){

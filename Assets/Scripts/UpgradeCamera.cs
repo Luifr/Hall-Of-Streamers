@@ -9,6 +9,8 @@ public class UpgradeCamera : Investimentos {
 		base.Start();
 		id = Tipo.Camera;
 		isEquipment = true;
+		custo = new int[] {30,80,200};
+		tempo = new int[] {3,5,5};
 	}
 	
 	public override void Efeito(){
