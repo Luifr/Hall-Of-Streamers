@@ -77,7 +77,7 @@ public class Atributos : MonoBehaviour {
 			t.text = "Vortex Jelly - Dinheiro R$ " + dinheiro.ToString("F2");
 		}
 		foreach(Text t in dinheiroMenu){
-			t.text = "rating: " + rating + "; max: " + maxRep + "; rep: " + rep +"; R$ " + dinheiro.ToString("F2");
+			t.text = /*"rating: " + rating + "; max: " + maxRep + "; rep: " + rep +";*/ "R$ " + dinheiro.ToString("F2");
 		}
 		viewersText.text = viewers.ToString() +  " VIEWERS";
 		//dinheiroText.text = "Dinheiro " + dinheiro;

@@ -29,7 +29,7 @@ public class PauseMenu : MonoBehaviour {
 		if (lerping) {
 			timeAux += 2 * Time.deltaTime;
 			t = Mathf.Min (timeAux, 1);
-			Debug.Log ("T = " + t);
+			//Debug.Log ("T = " + t);
 			painel.anchoredPosition = (Vector2) Vector3.Lerp (posInicial, Vector3.zero, t);
 			bgImg.color = new Color (col.r, col.g, col.b, col.a*t);
 
