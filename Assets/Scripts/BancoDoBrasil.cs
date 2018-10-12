@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.UI;
 
 public class BancoDoBrasil : MonoBehaviour {
 
@@ -35,20 +36,28 @@ public class BancoDoBrasil : MonoBehaviour {
 		}
 	}
 
-	int Emprestar(int quantia){
+	public void Emprestar(Text text){
+		float quantia;
+		try{
+			quantia = float.Parse(text.text.Replace(",","."),System.Globalization.CultureInfo.InvariantCulture);
+		}
+		catch(Exception e){
+			return;
+		}
+		Debug.Log(quantia);
 		if (quantia <= 0)
-			return 1;
+			return;
 		if (quantia > emprestimoMax)
-			return 2;
+			return;
 		if (dinheiroEmprestado > 0)
-			return 3;
+			return;
 		diaEmprestimo = Relogio.data.Day;
 		tempoDecorrido = 0;
 		dinheiroEmprestado = Mathf.RoundToInt(quantia * (1.0f + taxaEmprestimo / 100.0f));
 
 		Atributos.dinheiro += quantia;
 
-		return 0;
+		return;
 	}
 
 	int PagarEmprestimo() {
@@ -60,4 +69,11 @@ public class BancoDoBrasil : MonoBehaviour {
 
 		return 0;
 	}
+
+	public void SetEmprestimoValue(Text text){
+		string s = Relogio.data.AddDays(prazoPagamento).ToShortDateString();
+		string[] s1 = s.Substring(0,s.Length-5).Split('/');
+		text.text = "Data pagamento: " + s1[1] + "/" + s1[0]; 
+	}
+
 }

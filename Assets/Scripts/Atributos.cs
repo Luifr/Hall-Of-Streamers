@@ -6,12 +6,12 @@ using UnityEngine.UI;
 public class Atributos : MonoBehaviour {
 
 	private List<Text> dinheiroText;
-	private Text dinheiroMenu;
+	private List<Text> dinheiroMenu;
 	private Text viewersText;
-	private int viewers;
+	public int viewers;
 	public static int rep;
 	private int maxRep;
-	public static int dinheiro;
+	public static float dinheiro;
 	private int tick;
 	public static int rating; // aumenta quando faz um upgrade, e decai com o tempo
 	public static int delay; // delay em ticks
@@ -19,15 +19,16 @@ public class Atributos : MonoBehaviour {
 	void Start () {
 		var gobj = Resources.FindObjectsOfTypeAll<Text>();
 		dinheiroText = new List<Text>();
+		dinheiroMenu = new List<Text>();
 		foreach(Text o in gobj){
 			if(o.gameObject.tag.Equals("dinheiro"))
 				dinheiroText.Add( o.GetComponent<Text>() );
 			else if(o.gameObject.tag.Equals("dinheiroMenu")){
-				dinheiroMenu = o;
+				dinheiroMenu.Add( o );
 			}
 		}
 		viewersText = GameObject.Find("Viewers").GetComponent<Text>();
-		dinheiro = 0;
+		dinheiro = 1000;
 		rep = 0;
 		delay = 0;
 		maxRep = 0;
@@ -53,7 +54,9 @@ public class Atributos : MonoBehaviour {
 		foreach(Text t in dinheiroText){
 			t.text = "Vortex Jelly - Dinheiro R$ " + dinheiro;
 		}
-		dinheiroMenu.text = "R$ " + dinheiro;
+		foreach(Text t in dinheiroMenu){
+			t.text = "R$ " + dinheiro;
+		}
 		viewersText.text = viewers.ToString() +  " VIEWERS";
 		//dinheiroText.text = "Dinheiro " + dinheiro;
 	}
