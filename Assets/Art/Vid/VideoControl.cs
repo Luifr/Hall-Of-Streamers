@@ -47,19 +47,19 @@ public class VideoControl : MonoBehaviour {
 		if (equips.Length > 0){
 			scenario.sprite = cams[equips[0].currentTier];
 			microphone.sprite = mics[equips[1].currentTier];
-			if (currScreen != equips[0].currentTier){
-				screens[currScreen].gameObject.SetActive(false);
-				currScreen = equips[0].currentTier;
-				screens[currScreen].gameObject.SetActive(true);
-			}
+			// if (currScreen != equips[0].currentTier){
+			// 	screens[currScreen].gameObject.SetActive(false);
+			// 	currScreen = equips[0].currentTier;
+			// 	screens[currScreen].gameObject.SetActive(true);
+			// }
 		}else{
 			scenario.sprite = cams[tests[0]];
 			microphone.sprite = mics[tests[1]];
-			if (currScreen != tests[0]){
-				screens[currScreen].gameObject.SetActive(false);
-				currScreen = tests[0];
-				screens[currScreen].gameObject.SetActive(true);
-			}
+			// if (currScreen != tests[0]){
+			// 	screens[currScreen].gameObject.SetActive(false);
+			// 	currScreen = tests[0];
+			// 	screens[currScreen].gameObject.SetActive(true);
+			// }
 		}
 	}
 }
