@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Video : MonoBehaviour {
 
-	bool paused = true;
+	bool paused = false;
 	public Sprite pausedImage;
 	public Sprite playImage;
 	private Image image;
