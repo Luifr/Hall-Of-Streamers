@@ -14,7 +14,7 @@ public class Relogio : MonoBehaviour {
 	private GameObject tutorial;
 	private Text tutorialText;
 	private float timer=0;
-	public static float timer2=0;
+	public static float timer2;
 	public static int ticks;
 	private float secPerTick = 2;
 	private int ticksPerDay = 61;
@@ -28,7 +28,7 @@ public class Relogio : MonoBehaviour {
 		"Isso aqui e a loja, la voce pode comprar os equipamentos que eu mencionei, eles atrairam o pessoal!",
 	};
 
-	public static int count = 0;
+	public static int count;
 	private float[] times = new float[] {0,0,5,15};
 
 	// Use this for initialization

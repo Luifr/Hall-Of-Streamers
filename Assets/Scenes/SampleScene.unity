@@ -2704,8 +2704,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -15, y: -13}
-  m_SizeDelta: {x: 332.6, y: 28.8}
+  m_AnchoredPosition: {x: -14.8, y: -43.2}
+  m_SizeDelta: {x: 332.6, y: 89.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &710572846
 MonoBehaviour:
@@ -2728,10 +2728,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 194
+    m_FontSize: 20
     m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 10
+    m_BestFit: 0
+    m_MinSize: 0
     m_MaxSize: 194
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -2739,7 +2739,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Descri\xE7\xE3o: adasdasasd"
+  m_Text: "Descri\xE7\xE3o: Aumente a qualidade de seus v\xEDdeos e desperte o interesse
+    de mais espectadores."
 --- !u!222 &710572847
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4286,8 +4287,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -20, y: -13}
-  m_SizeDelta: {x: 332.6, y: 28.8}
+  m_AnchoredPosition: {x: 1.1, y: -34.3}
+  m_SizeDelta: {x: 374.5, y: 71.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &968534523
 MonoBehaviour:
@@ -4310,10 +4311,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 194
+    m_FontSize: 20
     m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 10
+    m_BestFit: 0
+    m_MinSize: 0
     m_MaxSize: 194
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -4321,7 +4322,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Descri\xE7\xE3o: adasdasasd"
+  m_Text: "Descri\xE7\xE3o: Com mais conhecimento nesta \xE1rea, voc\xEA perder\xE1
+    menos tempo instalando equipamentos e softwares."
 --- !u!222 &968534524
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5102,7 +5104,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1145985418
 RectTransform:
   m_ObjectHideFlags: 0
