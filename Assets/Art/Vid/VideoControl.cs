@@ -5,7 +5,7 @@ using UnityEngine;
 public class VideoControl : MonoBehaviour {
 
 	
-	public Animator playerANim;
+	public Animator playerAnim;
 	public float pAnimTime, pRandom;
 	int pAnim = 0;
 
@@ -21,7 +21,7 @@ public class VideoControl : MonoBehaviour {
 		cTime = Time.time;
 		if (cTime - sTime >= pAnimTime + rTime){
 			pAnim = Random.Range(0,3);
-			
+			playerAnim.SetInteger("anim",pAnim);
 		}
 	}
 }
