@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public abstract class Investimentos : MonoBehaviour {
 
+	private UpgradeInformatica info;
 	[SerializeField]
 	private Sprite[] sprites;
 	protected int[] custo;
@@ -26,11 +27,12 @@ public abstract class Investimentos : MonoBehaviour {
 	protected virtual void Start () {
 		var a = GameObject.Find("Atributos");
 		attr = a.GetComponent<Atributos>();
+		info = GameObject.Find("Informatica").GetComponent<UpgradeInformatica>();
 	}
 
 	public void Investir(Button button){
 		if(currentTier < custo.Length && Atributos.dinheiro >= custo[currentTier] ){
-			Atributos.delayFinish = Relogio.data.AddHours(tempo[currentTier]);
+			Atributos.delayFinish = Relogio.data.AddHours(tempo[currentTier]-tempo[currentTier]*0.2*info.currentTier);
 			if(isEquipment){
 			/*	Atributos.delay -= currentTier; // ATUALIZAR ISSO QUANDO COMPRAR O INFORMATICA
 				Atributos.delay = Mathf.Max(0,Atributos.delay);
