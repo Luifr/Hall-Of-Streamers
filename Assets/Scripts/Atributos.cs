@@ -11,7 +11,7 @@ public class Atributos : MonoBehaviour {
 	private List<Text> dinheiroMenu;
 	private Text viewersText;
 	public int viewers;
-	private int baseViewers;
+	public static int baseViewers;
 	public static int rep;
 	private int maxRep;
 	public static float dinheiro;
