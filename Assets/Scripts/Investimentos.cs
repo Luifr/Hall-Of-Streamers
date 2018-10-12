@@ -46,6 +46,7 @@ public abstract class Investimentos : MonoBehaviour {
 			if(currentTier == custo.Length){
 				finished++;
 			}
+			Atributos.baseViewers = Mathf.RoundToInt( 1.2f*Atributos.baseViewers );
 			ultimoUpgrade = DateTime.Now;
 			Atributos.rating+=40;
 			attr.viewers = 0;
