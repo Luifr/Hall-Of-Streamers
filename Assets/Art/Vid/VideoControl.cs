@@ -22,6 +22,7 @@ public class VideoControl : MonoBehaviour {
 		if (cTime - sTime >= pAnimTime + rTime){
 			pAnim = Random.Range(0,3);
 			playerAnim.SetInteger("anim",pAnim);
+			Debug.Log("foi");
 		}
 	}
 }
