@@ -9,7 +9,7 @@ public class UpgradeCamera : Investimentos {
 		base.Start();
 		id = Tipo.Camera;
 		isEquipment = true;
-		custo = new int[] {30,80,200};
+		custo = new int[] {25,90,500};
 		tempo = new int[] {3,5,5};
 	}
 	

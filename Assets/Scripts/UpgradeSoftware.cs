@@ -9,7 +9,7 @@ public class UpgradeSoftware : Investimentos {
 		base.Start();
 		id = Tipo.SoftwareDeGravacao;
 		isEquipment = true;
-		custo = new int[] {30,80,200};
+		custo = new int[] {50,90,700};
 		tempo = new int[] {3,5,5};
 	}
 	

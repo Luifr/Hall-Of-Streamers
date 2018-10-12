@@ -93,7 +93,7 @@ public class Atributos : MonoBehaviour {
 			boost = 1;
 		else if(shareClicks>=7){
 			baseViewers-= Mathf.RoundToInt(Mathf.Log(shareClicks));
-			Chat.AddCommentToChat(Comentario.getRandName(),"Para de spamma!!!!");
+			Chat.AddCommentToChat(Comentario.getRandName(),"Para de spamma!!!");
 		}
 	}
 
