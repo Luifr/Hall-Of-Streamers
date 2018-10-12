@@ -24,11 +24,12 @@ public class PauseMenu : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log ("Lerping: " + lerping);
+
+	//	Debug.Log ("Lerping: " + lerping);
 		if (lerping) {
 			timeAux += 2 * Time.deltaTime;
 			t = Mathf.Min (timeAux, 1);
-			Debug.Log ("T = " + t);
+			//Debug.Log ("T = " + t);
 			painel.anchoredPosition = (Vector2) Vector3.Lerp (posInicial, Vector3.zero, t);
 			bgImg.color = new Color (col.r, col.g, col.b, col.a*t);
 
@@ -57,4 +58,5 @@ public class PauseMenu : MonoBehaviour {
 		isPaused = false;
 		gameObject.SetActive (false);
 	}
+
 }
