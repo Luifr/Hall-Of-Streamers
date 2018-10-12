@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class Atributos : MonoBehaviour {
 
@@ -20,6 +21,8 @@ public class Atributos : MonoBehaviour {
 	public int shareClicks;
 	private int dia = System.DateTime.Now.Day;
 	private int boost = 0;
+	public static DateTime delayFinish; // Tempo de finalização do FastForward
+	public static bool fastForward;
 	// Use this for initialization
 	void Start () {
 		var gobj = Resources.FindObjectsOfTypeAll<Text>();
@@ -35,7 +38,8 @@ public class Atributos : MonoBehaviour {
 		viewersText = GameObject.Find("Viewers").GetComponent<Text>();
 		dinheiro = 15;
 		rep = 0;
-		delay = 0;
+		delayFinish = new DateTime ();
+		fastForward = false;
 		maxRep = 0;
 		viewers = 7;
 		baseViewers = 7;
@@ -95,13 +99,13 @@ public class Atributos : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if(tick < Relogio.ticks){
-			tick = Relogio.ticks;
-			if(delay > 0 ){
-				delay--;
-				// alguma animacao aqui
-			}
-			else{
+		if (delayFinish > Relogio.data) {
+			fastForward = true;
+		} 
+		else {
+			fastForward = false;
+			if(tick < Relogio.ticks){
+				tick = Relogio.ticks;
 				if(boost == 1){
 					baseViewers = Mathf.CeilToInt(baseViewers * 1.2f)+1;
 					boost = -4;

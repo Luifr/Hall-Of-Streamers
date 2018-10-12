@@ -41,6 +41,11 @@ public class Relogio : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (Atributos.fastForward) {
+			secPerTick = 0.5f;
+		} else {
+			secPerTick = 2;
+		}
 		timer += Time.deltaTime;
 		timer2 += Time.deltaTime;
 		//Debug.Log(count + " " + times.Length + " " + tutorial.activeInHierarchy + " " + times[count] + " " + timer);
@@ -58,7 +63,7 @@ public class Relogio : MonoBehaviour {
 		if(timer >= secPerTick){
 			timer-=secPerTick;
 			ticks++;
-			data = data.AddDays(1/(float)(ticksPerDay));
+			data = data.AddDays (1 / (float)(ticksPerDay));
 			//data.AddDays(1/ticksPerDay);
 		}
 		DisplayData ();

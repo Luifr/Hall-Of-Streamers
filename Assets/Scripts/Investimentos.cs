@@ -29,11 +29,11 @@ public abstract class Investimentos : MonoBehaviour {
 
 	public void Investir(Button button){
 		if(currentTier < custo.Length && Atributos.dinheiro >= custo[currentTier] ){
-			Atributos.delay += tempo[currentTier];
+			Atributos.delayFinish = Relogio.data.AddHours(tempo[currentTier]);
 			if(isEquipment){
-				Atributos.delay -= currentTier; // mudar aqui
+			/*	Atributos.delay -= currentTier; // ATUALIZAR ISSO QUANDO COMPRAR O INFORMATICA
 				Atributos.delay = Mathf.Max(0,Atributos.delay);
-				EquipButton(button);
+			*/	EquipButton(button);
 			}
 			else{
 				CourseButton(button);

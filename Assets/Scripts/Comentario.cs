@@ -24,7 +24,7 @@ public class Comentario : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (tick != Relogio.ticks) {
+		if (tick != Relogio.ticks && !Atributos.fastForward) {
 			if (UnityEngine.Random.Range (0, 100) < commentChance)
 				Comentar ();
 
