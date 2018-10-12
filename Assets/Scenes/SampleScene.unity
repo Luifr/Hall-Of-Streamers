@@ -373,6 +373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ef83206a7b21d74795efdb1de4e86f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dataText: {fileID: 0}
 --- !u!1 &223497130
 GameObject:
   m_ObjectHideFlags: 0
@@ -892,7 +893,7 @@ GameObject:
   - component: {fileID: 335832171}
   - component: {fileID: 335832170}
   m_Layer: 5
-  m_Name: Viewers (1)
+  m_Name: DataAtual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -948,7 +949,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 12/04/2018
+  m_Text: 12/10/18  12:00
 --- !u!222 &335832171
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2741,7 +2742,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00018247262, y: -0}
+  m_AnchoredPosition: {x: 0.00018247262, y: 0}
   m_SizeDelta: {x: 216.95, y: 215.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &808084244
@@ -4963,8 +4964,8 @@ Canvas:
   m_GameObject: {fileID: 1224126890}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -7951,7 +7952,7 @@ Prefab:
     - target: {fileID: 224868594391087310, guid: 4a28811a3969e92458b81f280d5c99f3,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000009321611
+      value: 0.000004935762
       objectReference: {fileID: 0}
     - target: {fileID: 224305308316544582, guid: 4a28811a3969e92458b81f280d5c99f3,
         type: 2}
