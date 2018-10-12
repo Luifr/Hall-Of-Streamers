@@ -482,7 +482,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.324}
-  m_AnchoredPosition: {x: -150.2539, y: -1.8098145}
+  m_AnchoredPosition: {x: -150.2539, y: -1.8100586}
   m_SizeDelta: {x: -1778.79, y: -208.87}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &261084732
@@ -914,7 +914,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.324}
-  m_AnchoredPosition: {x: -0.5, y: 99.54999}
+  m_AnchoredPosition: {x: -0.5, y: 99.549805}
   m_SizeDelta: {x: -1405.2, y: -254.75598}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &335832170
@@ -2091,7 +2091,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.324}
-  m_AnchoredPosition: {x: -583.70996, y: -27.829834}
+  m_AnchoredPosition: {x: -583.70996, y: -27.830078}
   m_SizeDelta: {x: -1345, y: -216.19}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &584843129
@@ -4193,6 +4193,21 @@ Prefab:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 224305308316544582, guid: 4a28811a3969e92458b81f280d5c99f3,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224305308316544582, guid: 4a28811a3969e92458b81f280d5c99f3,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224305308316544582, guid: 4a28811a3969e92458b81f280d5c99f3,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a28811a3969e92458b81f280d5c99f3, type: 2}
   m_IsPrefabAsset: 0
@@ -5262,7 +5277,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.324}
-  m_AnchoredPosition: {x: -600.4, y: 99.54999}
+  m_AnchoredPosition: {x: -600.3999, y: 99.549805}
   m_SizeDelta: {x: -1398.5, y: -267.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1316967806

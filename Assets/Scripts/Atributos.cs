@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class Atributos : MonoBehaviour {
 
@@ -14,7 +15,8 @@ public class Atributos : MonoBehaviour {
 	public static float dinheiro;
 	private int tick;
 	public static int rating; // aumenta quando faz um upgrade, e decai com o tempo
-	public static int delay; // delay em ticks
+	public static DateTime delayFinish; // Tempo de finalização do FastForward
+	public static bool fastForward;
 	// Use this for initialization
 	void Start () {
 		var gobj = Resources.FindObjectsOfTypeAll<Text>();
@@ -30,7 +32,8 @@ public class Atributos : MonoBehaviour {
 		viewersText = GameObject.Find("Viewers").GetComponent<Text>();
 		dinheiro = 1000;
 		rep = 0;
-		delay = 0;
+		delayFinish = new DateTime ();
+		fastForward = false;
 		maxRep = 0;
 		viewers = 2;
 		tick = 0;
@@ -73,18 +76,21 @@ public class Atributos : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if(tick < Relogio.ticks){
-			tick = Relogio.ticks;
-			if(delay > 0 ){
-				delay--;
-				// alguma animacao aqui
-			}
-			else{
-				rating = Mathf.Max(0,rating-1);
-				dinheiro += viewers * 0.07f ;
-				CalcularRep();
-				CalculaViewers();
-				AtualizaAtributos();
+		if (delayFinish > Relogio.data) {
+			fastForward = true;
+			// alguma animacao aqui
+		} else {
+			fastForward = false;
+		
+			if (tick < Relogio.ticks) {
+				tick = Relogio.ticks;
+
+				rating = Mathf.Max (0, rating - 1);
+				dinheiro += viewers * 0.07f;
+				CalcularRep ();
+				CalculaViewers ();
+				AtualizaAtributos ();
+
 			}
 		}
 	}

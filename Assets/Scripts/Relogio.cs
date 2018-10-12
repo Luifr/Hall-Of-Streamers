@@ -22,11 +22,16 @@ public class Relogio : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (Atributos.fastForward) {
+			secPerTick = 0.5f;
+		} else {
+			secPerTick = 2;
+		}
 		timer += Time.deltaTime;
-		if(timer >= secPerTick){
-			timer-=secPerTick;
+		if (timer >= secPerTick) {
+			timer = 0;
 			ticks++;
-			data = data.AddDays(1/(float)(ticksPerDay*secPerTick));
+			data = data.AddDays (1 / (float)(ticksPerDay));
 			//data.AddDays(1/ticksPerDay);
 		}
 		DisplayData ();
