@@ -11,7 +11,7 @@ public class BancoDoBrasil : MonoBehaviour {
 	public int taxaEmprestimo;
 	public int taxaJuros;
 	public int emprestimoMax;
-	public int dinheiroEmprestado;
+	public static int dinheiroEmprestado;
 	public int prazoPagamento;
 	public int diaEmprestimo;
 	private int tempoDecorrido;
@@ -43,7 +43,7 @@ public class BancoDoBrasil : MonoBehaviour {
 		try{
 			quantia = float.Parse(text.text.Replace(",","."),System.Globalization.CultureInfo.InvariantCulture);
 		}
-		catch(Exception e){
+		catch{
 			return;
 		}
 		Debug.Log(quantia);

@@ -20,6 +20,7 @@ public abstract class Investimentos : MonoBehaviour {
 	[NonSerialized]
 	public Tipo id;
 	private Atributos attr;
+	public static int finished;
 
 	// Use this for initialization
 	protected virtual void Start () {
@@ -40,6 +41,9 @@ public abstract class Investimentos : MonoBehaviour {
 			}
 			Atributos.dinheiro -= custo[currentTier];
 			currentTier = currentTier+1;
+			if(currentTier == custo.Length){
+				finished++;
+			}
 			ultimoUpgrade = DateTime.Now;
 			Atributos.rating+=40;
 			attr.viewers = 0;

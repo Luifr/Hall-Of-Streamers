@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class Relogio : MonoBehaviour {
 
 	[SerializeField]
+	private GameObject win;
+	[SerializeField]
 	private GameObject setaC;
 	[SerializeField]
 	private GameObject setaM;
@@ -19,6 +21,7 @@ public class Relogio : MonoBehaviour {
 	private float secPerTick = 2;
 	private int ticksPerDay = 61;
 	public static DateTime data;
+	public static DateTime start;
 	public Text dataText;
 
 	private string[] messages = new string[] {
@@ -36,11 +39,18 @@ public class Relogio : MonoBehaviour {
 		tutorialText = tutorial.transform.Find("Text").GetComponent<Text>();
 		dataText = GameObject.Find ("DataAtual").GetComponent<Text> ();
 		data = DateTime.Now;
+		start = DateTime.Now;
 		data = data.Date + new TimeSpan(12,0,0);
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+		if(Investimentos.finished == (int)Investimentos.Tipo.Size && BancoDoBrasil.dinheiroEmprestado == 0){
+			win.SetActive(true);	
+			win.GetComponentInChildren<Text>().text = "Parabéns voce conseguiu o melhor setup streamer disponivel no mercado em " + (DateTime.Now-start).Days + " dias!\nSera que consegue fazer mais rapido?";		
+		}
+
 		if (Atributos.fastForward) {
 			secPerTick = 0.5f;
 		} else {

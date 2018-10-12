@@ -29,6 +29,7 @@ public class Saver : MonoBehaviour {
 		data.date = Relogio.data.ToString();
 		data.count = Relogio.count;
 		data.timer2 = Relogio.timer2;
+		data.finished = Investimentos.finished;
 		foreach(Investimentos i in equips){
 			if(i is UpgradeCamera){
 				data.camLV = i.currentTier;
@@ -60,6 +61,7 @@ public class Saver : MonoBehaviour {
 			Atributos.dinheiro = 0;
 			Relogio.count = 0;
 			Relogio.timer2 = 0;
+			Investimentos.finished=0;
 			return;
 		}
 		BinaryFormatter bf = new BinaryFormatter();
@@ -71,6 +73,7 @@ public class Saver : MonoBehaviour {
 		Relogio.data = DateTime.Parse(data.date);
 		Relogio.count = data.count;
 		Relogio.timer2 = data.timer2;
+		Investimentos.finished = data.finished;
 		foreach(Investimentos i in equips){
 			if(i is UpgradeCamera){
 				i.currentTier = data.camLV;
@@ -100,6 +103,7 @@ public class Saver : MonoBehaviour {
 		public string date;
 		public float timer2;
 		public int count;
+		public int finished;
 
 	}
 
