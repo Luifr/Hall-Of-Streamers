@@ -6,6 +6,8 @@ using System;
 
 public class Atributos : MonoBehaviour {
 
+	public GameObject Manutenção;
+
 	public float[] hourModifier = new float[] {.6f,.5f,.4f,.4f,.3f,.6f,.7f,.7f,.8f,.8f,.9f,1 ,.9f,1.2f,1.2f,1.4f,1.3f,1.2f,1f,.9f,.8f,.8f,.7f,.7f };
 	private List<Text> dinheiroText;
 	private List<Text> dinheiroMenu;
@@ -25,6 +27,9 @@ public class Atributos : MonoBehaviour {
 	public static bool fastForward;
 	// Use this for initialization
 	void Start () {
+
+		Manutenção = GameObject.Find ("MenuManutencao");
+
 		var gobj = Resources.FindObjectsOfTypeAll<Text>();
 		dinheiroText = new List<Text>();
 		dinheiroMenu = new List<Text>();
@@ -101,9 +106,11 @@ public class Atributos : MonoBehaviour {
 	void Update () {
 		if (delayFinish > Relogio.data) {
 			fastForward = true;
+			Manutenção.SetActive (true);
 		} 
 		else {
 			fastForward = false;
+			Manutenção.SetActive (false);
 			if(tick < Relogio.ticks){
 				tick = Relogio.ticks;
 				if(boost == 1){
