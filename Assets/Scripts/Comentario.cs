@@ -77,22 +77,22 @@ public class Comentario : MonoBehaviour {
 	private void InicializarStrings() {
 		comentario = new string[(int)Investimentos.Tipo.Size][];
 		comentario [(int)Investimentos.Tipo.Camera] = new string[] {
-			"sua camera e uma merda",
-			"troca essa camera"
+			"sua camera ta muito ruim",
+			"troca essa camera",
+			"nao consigo te ver"
 		};
 		comentario [(int)Investimentos.Tipo.Microfone] = new string[] {
-			"O microfone ta bosta"
+			"O microfone ta com qualidade baixa",
+			"nao da pra entender oq vc ta falando",
 		};
 		comentario [(int)Investimentos.Tipo.SoftwareDeGravacao] = new string[] {
 			"Essa stream ta toda bugada",
-			"Essa stream tem menos fps que o pc da xuxa"
+			"Compra um software melhor pra gravar"
 		};
 
 		comentarioPositivo = new string[] {
 			"Esse aí é fera, heim meu",
-			"Oloco bixo!",
-			"Quem sabe faz ao vivo",
-			"Tu é o bixão mesmo",
+			"Conteudo muito bom!",
 			"Bom trabalhoooo"
 		};
 
