@@ -20,6 +20,16 @@ public class MainMenu : MonoBehaviour {
 		Application.Quit ();
 	}
 
+	public void LoadNewGame(){
+		Saver.load = false;
+		SceneManager.LoadScene ("SampleScene");
+	}
+
+	public void LoadGame(){
+		Saver.load = true;
+		SceneManager.LoadScene ("SampleScene");
+	}
+
 	public void LoadScene(string name) {
 		SceneManager.LoadScene (name);
 	}

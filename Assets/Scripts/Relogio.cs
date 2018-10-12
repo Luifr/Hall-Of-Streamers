@@ -26,7 +26,7 @@ public class Relogio : MonoBehaviour {
 		if(timer >= secPerTick){
 			timer-=secPerTick;
 			ticks++;
-			data = data.AddDays(1/(float)(ticksPerDay*secPerTick));
+			data = data.AddDays(1/(float)(ticksPerDay));
 			//data.AddDays(1/ticksPerDay);
 		}
 		DisplayData ();
