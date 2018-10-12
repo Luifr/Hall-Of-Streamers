@@ -9,7 +9,7 @@ public class UpgradeMicrofone : Investimentos {
 		base.Start();
 		id = Tipo.Microfone;
 		isEquipment = true;
-		custo = new int[] {30,80,200};
+		custo = new int[] {10,80,400};
 		tempo = new int[] {3,5,5};
 	}
 	

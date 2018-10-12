@@ -6,7 +6,7 @@ using System;
 public class Comentario : MonoBehaviour {
 
 	private Investimentos[] equipment;
-	private string[] nomes;
+	public static string[] nomes;
 	private string[][] comentario;
 	private string[] comentarioPositivo;
 
@@ -32,24 +32,31 @@ public class Comentario : MonoBehaviour {
 		}
 	}
 
+	public static string getRandName(){
+		string nome;
+		nome = nomes[ UnityEngine.Random.Range(1,nomes.Length) ];
+		if (UnityEngine.Random.Range (1, 100) > 85) {
+			nome += "_gamer";
+		}
+		if (UnityEngine.Random.Range (1, 100) > 70) {
+			nome += UnityEngine.Random.Range (1, 100000).ToString ();
+		}
+
+		return nome;
+	}
 	public void Comentar(){
-		string s, nome;
+		string s;
 		if(UnityEngine.Random.Range(0,100) > Atributos.rating){
-			Atributos.rep-=UnityEngine.Random.Range(1,Mathf.RoundToInt(Mathf.Log(Atributos.rep+1)*Mathf.Log(Atributos.rep+1))+1);
+			Atributos.rep-= Mathf.RoundToInt(UnityEngine.Random.Range(.05f,.2f)*Atributos.rep);
+			Atributos.rep = Mathf.Max(0,Atributos.rep);
 			int i = getEquipmentToComment();
 			s = comentario [i] [UnityEngine.Random.Range (0, comentario [i].Length)];
 		}
 		else{
 			s = comentarioPositivo[UnityEngine.Random.Range(0,comentarioPositivo.Length)];
 		}
-		nome = nomes[ UnityEngine.Random.Range(1,nomes.Length) ];
-		if (UnityEngine.Random.Range (1, 100) > 70) {
-			nome += "_gamer";
-		}
-		if (UnityEngine.Random.Range (1, 100) > 60) {
-			nome += UnityEngine.Random.Range (1, 100000).ToString ();
-		}
-		Chat.AddCommentToChat (nome, s);
+
+		Chat.AddCommentToChat (getRandName(), s);
 		// printar s como comentario
 	}
 
@@ -77,7 +84,8 @@ public class Comentario : MonoBehaviour {
 			"O microfone ta bosta"
 		};
 		comentario [(int)Investimentos.Tipo.SoftwareDeGravacao] = new string[] {
-			"Essa stream ta toda bugada"
+			"Essa stream ta toda bugada",
+			"Essa stream tem menos fps que o pc da xuxa"
 		};
 
 		comentarioPositivo = new string[] {
