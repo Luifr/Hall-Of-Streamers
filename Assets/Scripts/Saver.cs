@@ -10,7 +10,7 @@ public class Saver : MonoBehaviour {
 	public static bool load = true;
 	private Investimentos[] equips;
 
-	private string filename = "playerdata.dat";
+	public static string filename = "playerdata.dat";
 
 	// Use this for initialization
 	void Start () {
