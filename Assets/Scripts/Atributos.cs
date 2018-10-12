@@ -44,6 +44,7 @@ public class Atributos : MonoBehaviour {
 		// Debug.Log("2: " + viewers);
 		viewers += maxRep > rep ? -((maxRep-rep)*(maxRep-rep)) : Mathf.RoundToInt(rep*Mathf.Log(rep+1));
 		// Debug.Log("3: " + viewers + " " + Mathf.RoundToInt(rep*Mathf.Log(rep+1)) + " " + rep);
+		viewers = Mathf.Max(0,viewers);
 	}
 
 	void CalcularRep(){
@@ -80,7 +81,7 @@ public class Atributos : MonoBehaviour {
 			}
 			else{
 				rating = Mathf.Max(0,rating-1);
-				dinheiro += viewers;
+				dinheiro += viewers * 0.07f ;
 				CalcularRep();
 				CalculaViewers();
 				AtualizaAtributos();

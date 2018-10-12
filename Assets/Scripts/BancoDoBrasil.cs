@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class BancoDoBrasil : MonoBehaviour {
 
+	[SerializeField]
+	private GameObject tax;
 	public int taxaEmprestimo;
 	public int taxaJuros;
 	public int emprestimoMax;
@@ -56,24 +58,32 @@ public class BancoDoBrasil : MonoBehaviour {
 		dinheiroEmprestado = Mathf.RoundToInt(quantia * (1.0f + taxaEmprestimo / 100.0f));
 
 		Atributos.dinheiro += quantia;
-
+		string s = GameObject.Find("dec2 (5)").GetComponent<Text>().text;
+		tax.SetActive(true);
+		tax.GetComponentInChildren<Text>().text = "Valor Emprestado:\nR$: " + dinheiroEmprestado + "\n\nDevolucao:\n" + s.Substring(s.Length-5);
+		//Atributos.
 		return;
 	}
 
-	int PagarEmprestimo() {
+	public void PagarEmprestimo(GameObject box) {
 		if (Atributos.dinheiro < dinheiroEmprestado)
-			return 1;
+			return ;
 
 		Atributos.dinheiro -= dinheiroEmprestado;
 		dinheiroEmprestado = 0;
-
-		return 0;
+		box.SetActive(true);
+		return ;
 	}
 
 	public void SetEmprestimoValue(Text text){
+		text.text = "R$ " + dinheiroEmprestado; 
+	}
+
+	public void SetEmprestimoDate(Text text){
 		string s = Relogio.data.AddDays(prazoPagamento).ToShortDateString();
 		string[] s1 = s.Substring(0,s.Length-5).Split('/');
 		text.text = "Data pagamento: " + s1[1] + "/" + s1[0]; 
 	}
+
 
 }

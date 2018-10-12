@@ -63,7 +63,7 @@ public abstract class Investimentos : MonoBehaviour {
 	void CourseButton(Button button){
 		if(currentTier+1 < custo.Length){
 			button.transform.Find("Text").GetComponentInChildren<Text>().text = "R$ " + custo[currentTier+1];
-			button.transform.Find("Text (1)").GetComponentInChildren<Text>().text = "Duração do cursp: " + tempo[currentTier+1] + "h";
+			button.transform.Find("Text (1)").GetComponentInChildren<Text>().text = "Duração do curso: " + tempo[currentTier+1] + "h";
 		}
 		else{
 			button.transform.Find("Text").GetComponentInChildren<Text>().text = "";
