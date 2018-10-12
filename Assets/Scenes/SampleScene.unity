@@ -127,7 +127,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4408485
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2223,7 +2223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ac79b8a2c7cc1345a619ce07b15d023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "Manuten\xE7\xE3o": {fileID: 0}
+  "Manuten\xE7\xE3o": {fileID: 4408484}
   hourModifier:
   - 0.6
   - 0.5

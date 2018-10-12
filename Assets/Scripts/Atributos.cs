@@ -28,7 +28,7 @@ public class Atributos : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		Manutenção = GameObject.Find ("MenuManutencao");
+	//	Manutenção = GameObject.Find ("MenuManutencao");
 
 		var gobj = Resources.FindObjectsOfTypeAll<Text>();
 		dinheiroText = new List<Text>();
