@@ -24,7 +24,8 @@ public class PauseMenu : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log ("Lerping: " + lerping);
+
+	//	Debug.Log ("Lerping: " + lerping);
 		if (lerping) {
 			timeAux += 2 * Time.deltaTime;
 			t = Mathf.Min (timeAux, 1);
@@ -57,4 +58,5 @@ public class PauseMenu : MonoBehaviour {
 		isPaused = false;
 		gameObject.SetActive (false);
 	}
+
 }

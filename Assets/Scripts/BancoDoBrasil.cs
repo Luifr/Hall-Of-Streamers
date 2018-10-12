@@ -43,7 +43,7 @@ public class BancoDoBrasil : MonoBehaviour {
 		try{
 			quantia = float.Parse(text.text.Replace(",","."),System.Globalization.CultureInfo.InvariantCulture);
 		}
-		catch(Exception e){
+		catch {
 			return;
 		}
 		Debug.Log(quantia);
