@@ -11,17 +11,23 @@ public class Chat : MonoBehaviour {
 	private static GameObject content;
 	private static Scrollbar scroll;
 
+	private static int atualiza;
+
 	// Use this for initialization
 	void Start () {
 		commentPrefab = prefab;
 		content = GetComponentInChildren<LayoutGroup> ().gameObject;
 		scroll = GetComponentInChildren<Scrollbar> ();
 		commentList = new List<GameObject> ();
+		atualiza = 0;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (atualiza > 0) {			// Serve para dar um delay de 2 updates para chamar a função AtualizaScroll
+			if (--atualiza == 0)
+				AtualizaScroll ();
+		}
 	}
 
 	public static void AddCommentToChat(string nome, string comentario) {
@@ -31,6 +37,11 @@ public class Chat : MonoBehaviour {
 		txt.textBody = comentario;
 
 		commentList.Add (cmt);
+
+		atualiza = 2;
+	}
+
+	public static void AtualizaScroll() {
 		scroll.value = 0;
 	}
 }
