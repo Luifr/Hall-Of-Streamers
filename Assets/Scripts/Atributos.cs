@@ -36,7 +36,7 @@ public class Atributos : MonoBehaviour {
 			}
 		}
 		viewersText = GameObject.Find("Viewers").GetComponent<Text>();
-		dinheiro = 15;
+		dinheiro = 15000;
 		rep = 0;
 		delayFinish = new DateTime ();
 		fastForward = false;
@@ -92,7 +92,7 @@ public class Atributos : MonoBehaviour {
 		if(shareClicks++==0 && boost==0 )
 			boost = 1;
 		else if(shareClicks>=7){
-			baseViewers-= Mathf.RoundToInt(Mathf.Log(shareClicks));
+			baseViewers-= Mathf.RoundToInt(Mathf.Log(shareClicks)/10);
 			Chat.AddCommentToChat(Comentario.getRandName(),"Para de spamma!!!");
 		}
 	}
@@ -116,7 +116,7 @@ public class Atributos : MonoBehaviour {
 				shareClicks = Mathf.FloorToInt( shareClicks*0.80f )-1 ;
 				shareClicks=Mathf.Max(0,shareClicks);
 				rating = Mathf.Max(0,rating-1);
-				dinheiro += viewers * 0.01f ;
+				dinheiro += viewers * 0.03f ;
 				CalcularRep();
 				CalculaViewers();
 				AtualizaAtributos();
