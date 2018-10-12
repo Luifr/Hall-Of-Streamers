@@ -30,7 +30,7 @@ public class Atributos : MonoBehaviour {
 			}
 		}
 		viewersText = GameObject.Find("Viewers").GetComponent<Text>();
-		dinheiro = 1000;
+		dinheiro = 0;
 		rep = 0;
 		delayFinish = new DateTime ();
 		fastForward = false;

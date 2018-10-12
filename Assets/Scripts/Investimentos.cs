@@ -23,7 +23,6 @@ public abstract class Investimentos : MonoBehaviour {
 
 	// Use this for initialization
 	protected virtual void Start () {
-		currentTier = 0;
 		var a = GameObject.Find("Atributos");
 		attr = a.GetComponent<Atributos>();
 	}
