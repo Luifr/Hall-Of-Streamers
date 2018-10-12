@@ -13,7 +13,7 @@ public abstract class Investimentos : MonoBehaviour {
 	private int maxTier;
 	protected bool isEquipment;
 
-	public enum Tipo { Microfone, Camera , SoftwareDeGravacao , Carisma , Montagem }
+	public enum Tipo { Microfone, Camera , SoftwareDeGravacao , Carisma , Montagem , Size}
 	
 	[NonSerialized]
 	public Tipo id;
