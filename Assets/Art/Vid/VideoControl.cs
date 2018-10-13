@@ -31,6 +31,7 @@ public class VideoControl : MonoBehaviour {
 	void Start () {
 		sTime = Time.time;
 		currScreen = 0;
+		
 	}
 	
 	// Update is called once per frame

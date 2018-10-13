@@ -1,12 +1,11 @@
 fileFormatVersion: 2
-guid: 70b037f354d1bdf45926fb74bc5b82f1
+guid: 8f2f4f2c2d6dda049af9574909ae588c
 TextureImporter:
   fileIDToRecycleName:
-    21300000: spr_vid_g1_ship_0
-    21300002: spr_vid_g1_ship_1
-    21300004: spr_vid_g1_ship_2
-    21300006: spr_vid_g1_ship_3
-    21300008: spr_vid_g1_ship_4
+    21300000: spr_vid_g1_explosion_0
+    21300002: spr_vid_g1_explosion_1
+    21300004: spr_vid_g1_explosion_2
+    21300006: spr_vid_g1_explosion_3
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -89,13 +88,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spr_vid_g1_ship_0
+      name: spr_vid_g1_explosion_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 438.8
-        height: 425
+        width: 531.75
+        height: 531
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -103,19 +102,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40acedbb44651a048b7b6ade9c020466
+      spriteID: 347bb32634a4ba64d97e8641b71a5cf3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_vid_g1_ship_1
+      name: spr_vid_g1_explosion_1
       rect:
         serializedVersion: 2
-        x: 438
+        x: 531
         y: 0
-        width: 438.8
-        height: 425
+        width: 531.75
+        height: 531
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -123,19 +122,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd3d95cf27ad1b44d972dfc0e41eaff4
+      spriteID: a5846856fc940c54eab0216876a466fb
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_vid_g1_ship_2
+      name: spr_vid_g1_explosion_2
       rect:
         serializedVersion: 2
-        x: 876
+        x: 1062
         y: 0
-        width: 438.8
-        height: 425
+        width: 531.75
+        height: 531
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,19 +142,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 041fc8c23aaa7fa49b90cf6513e044fe
+      spriteID: 9f139ab4ff587764ca1e511cec164881
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_vid_g1_ship_3
+      name: spr_vid_g1_explosion_3
       rect:
         serializedVersion: 2
-        x: 1314
+        x: 1593
         y: 0
-        width: 438.8
-        height: 425
+        width: 531.75
+        height: 531
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,27 +162,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ccafed191d2f5f45842d8423c54ef31
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spr_vid_g1_ship_4
-      rect:
-        serializedVersion: 2
-        x: 1752
-        y: 0
-        width: 438.8
-        height: 425
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6ccc129999104594ea34366727c26502
+      spriteID: fbad422040b5b794692675a6631e9723
       vertices: []
       indices: 
       edges: []
@@ -191,7 +170,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 65fc121f0ea5e374e90c3ce63ee0e1d6
+    spriteID: 5caed8961648d2843aa4b55609a5eeb1
     vertices: []
     indices: 
     edges: []
