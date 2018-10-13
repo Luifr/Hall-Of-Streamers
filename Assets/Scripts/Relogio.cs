@@ -32,7 +32,7 @@ public class Relogio : MonoBehaviour {
 	};
 
 	public static int count;
-	private float[] times = new float[] {0,0,5,10};
+	private float[] times = new float[] {0,0,0,0};
 
 	// Use this for initialization
 	void Start () {
