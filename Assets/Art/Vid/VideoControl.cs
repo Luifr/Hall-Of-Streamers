@@ -42,25 +42,17 @@ public class VideoControl : MonoBehaviour {
 			pAnim = Random.Range(0,3);
 			playerAnim.SetInteger("anim",pAnim);
 			sTime = Time.time;
-			screens[currScreen].Refresh();
+			screens[currScreen].Refresh();		
 		}
 
 		if (equips.Length > 0){
 			scenario.sprite = cams[equips[0].currentTier];
 			microphone.sprite = mics[equips[1].currentTier];
-			// if (currScreen != equips[0].currentTier){
-			// 	screens[currScreen].gameObject.SetActive(false);
-			// 	currScreen = equips[0].currentTier;
-			// 	screens[currScreen].gameObject.SetActive(true);
-			// }
-		}else{
+            screens[0].Upgrade(equips[2].currentTier);
+        }else{
 			scenario.sprite = cams[tests[0]];
 			microphone.sprite = mics[tests[1]];
-			// if (currScreen != tests[0]){
-			// 	screens[currScreen].gameObject.SetActive(false);
-			// 	currScreen = tests[0];
-			// 	screens[currScreen].gameObject.SetActive(true);
-			// }
+			screens[0].Upgrade(tests[2]);
 		}
 	}
 }

@@ -28,7 +28,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1039095107778420
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,12 +165,12 @@ GameObject:
   - component: {fileID: 114756287319803434}
   - component: {fileID: 95578733859723974}
   m_Layer: 5
-  m_Name: Ship
+  m_Name: Ship2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1587474339314698
 GameObject:
   m_ObjectHideFlags: 1
@@ -342,7 +342,7 @@ Animator:
   m_GameObject: {fileID: 1684931295518942}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 541aa514931ecf64596e629ab4318f33, type: 2}
+  m_Controller: {fileID: 22100000, guid: 55f071f047952254ba07d3379607ef23, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -378,7 +378,7 @@ Animator:
   m_GameObject: {fileID: 1759289263225290}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 541aa514931ecf64596e629ab4318f33, type: 2}
+  m_Controller: {fileID: 22100000, guid: 55f071f047952254ba07d3379607ef23, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -396,7 +396,7 @@ Animator:
   m_GameObject: {fileID: 1849564540858200}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 541aa514931ecf64596e629ab4318f33, type: 2}
+  m_Controller: {fileID: 22100000, guid: 55f071f047952254ba07d3379607ef23, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -468,7 +468,7 @@ Animator:
   m_GameObject: {fileID: 1974215774501498}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 541aa514931ecf64596e629ab4318f33, type: 2}
+  m_Controller: {fileID: 22100000, guid: 55f071f047952254ba07d3379607ef23, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -532,7 +532,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 31b0b056fd0a3e64ab815d215693102e, type: 3}
+  m_Sprite: {fileID: 21300004, guid: 8f2f4f2c2d6dda049af9574909ae588c, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -559,7 +559,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 31b0b056fd0a3e64ab815d215693102e, type: 3}
+  m_Sprite: {fileID: 21300004, guid: 8f2f4f2c2d6dda049af9574909ae588c, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -586,7 +586,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 31b0b056fd0a3e64ab815d215693102e, type: 3}
+  m_Sprite: {fileID: 21300004, guid: 8f2f4f2c2d6dda049af9574909ae588c, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -654,7 +654,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1019296003642586}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -770,12 +770,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e6867a17890a44ba4fc309f35663d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ship: {fileID: 95578733859723974}
-  explosions:
-  - {fileID: 95421852381946350}
-  - {fileID: 95141694242348056}
-  - {fileID: 95616857717173308}
-  - {fileID: 95363820751093426}
+  bg: {fileID: 0}
+  newBg: {fileID: 0}
+  ship1: {fileID: 0}
+  ship2: {fileID: 0}
+  explosions1: []
+  explosions2: []
 --- !u!114 &114546467849041382
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -868,12 +868,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e6867a17890a44ba4fc309f35663d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ship: {fileID: 95575592834709490}
-  explosions:
+  bg: {fileID: 114349378475700914}
+  newBg: {fileID: 21300000, guid: 037dac0a0b17802439dcce3059d9ce6c, type: 3}
+  ship1: {fileID: 95575592834709490}
+  ship2: {fileID: 95578733859723974}
+  explosions1:
   - {fileID: 95287106973990262}
   - {fileID: 95443216677704276}
   - {fileID: 95781150516963924}
   - {fileID: 95986409748526288}
+  explosions2:
+  - {fileID: 95421852381946350}
+  - {fileID: 95141694242348056}
+  - {fileID: 95616857717173308}
+  - {fileID: 95363820751093426}
 --- !u!114 &114691856718963672
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -947,7 +955,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300002, guid: ff88377df5a4f2548b251fc93cae3c1b, type: 3}
+  m_Sprite: {fileID: 21300002, guid: 70b037f354d1bdf45926fb74bc5b82f1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -974,7 +982,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 31b0b056fd0a3e64ab815d215693102e, type: 3}
+  m_Sprite: {fileID: 21300004, guid: 8f2f4f2c2d6dda049af9574909ae588c, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
