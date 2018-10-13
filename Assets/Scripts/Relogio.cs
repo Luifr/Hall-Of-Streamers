@@ -48,7 +48,7 @@ public class Relogio : MonoBehaviour {
 		// Checa fim de jogo
 		if(Investimentos.finished == (int)Investimentos.Tipo.Size && BancoDoBrasil.dinheiroEmprestado == 0){
 			win.SetActive(true);	
-			win.GetComponentInChildren<Text>().text = "Parabéns voce conseguiu o melhor setup streamer disponivel no mercado em " + (DateTime.Now-start).Days + " dias!\nSera que consegue fazer mais rapido?";		
+			win.GetComponentInChildren<Text>().text = "Parabéns voce conseguiu o melhor setup streamer disponivel no mercado em " + (data-start).Days + " dias!\nSera que consegue fazer mais rapido?";		
 		}
 
 

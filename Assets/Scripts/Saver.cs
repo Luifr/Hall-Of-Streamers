@@ -15,6 +15,11 @@ public class Saver : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		equips = GameObject.Find("Equipments").GetComponentsInChildren<Investimentos>();
+		Atributos.rep = 0;
+		Atributos.dinheiro = 0;
+		Relogio.count = 0;
+		Relogio.timer2 = 0;
+		Investimentos.finished=0;
 		if(load)
 			Load();
 	}
