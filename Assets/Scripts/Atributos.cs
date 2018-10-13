@@ -14,6 +14,7 @@ public class Atributos : MonoBehaviour {
 	private Text viewersText;
 	public int viewers;
 	public static int baseViewers;
+	public static int maxBaseViewers;
 	public static int rep;
 	private int maxRep;
 	public static float dinheiro;
@@ -41,7 +42,7 @@ public class Atributos : MonoBehaviour {
 			}
 		}
 		viewersText = GameObject.Find("Viewers").GetComponent<Text>();
-		dinheiro = 15000;
+		dinheiro = 15;
 		rep = 0;
 		delayFinish = new DateTime ();
 		fastForward = false;
@@ -54,19 +55,25 @@ public class Atributos : MonoBehaviour {
 	}
 
 	void CalculaBaseViewers(){
+
+		if(baseViewers > maxBaseViewers){
+			maxBaseViewers = baseViewers;
+		}
+
 		if(( maxRep+1) / (rep+1) > 1.2f ){
 			baseViewers -= Mathf.RoundToInt(  Mathf.Log(rep*rep*rep*rep)    );
 		}
 		else{
 			baseViewers += Mathf.RoundToInt(  Mathf.Log(rep*rep)    );
 		}
+		baseViewers = Mathf.Max(baseViewers,Mathf.RoundToInt(maxBaseViewers*0.5f));
 	}
 
 	void CalculaViewers(){
 		int hour = Relogio.data.Hour;
 		viewers = Mathf.RoundToInt(baseViewers * hourModifier[hour]);
 		//viewers += (maxRep+1)/(rep+1) > 1.15f ? -Mathf.RoundToInt( (viewers*.3f)) : Mathf.RoundToInt( Mathf.Log(rep+1)+1 );
-		viewers = Mathf.Max(0,viewers);
+		viewers = Mathf.Max(1,viewers);
 	}
 
 	void CalcularRep(){
