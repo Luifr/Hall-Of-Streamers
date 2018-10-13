@@ -8,7 +8,7 @@ public class AutoSaver : MonoBehaviour {
 	public Toggle autoSave;
 	public Saver saver;
 
-	private const float autosaveDelay = 2;
+	private const float autosaveDelay = 20;
 	private float autosaveTime;
 
 	// Use this for initialization
